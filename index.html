@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>John Doe | Portfolio</title>
+    <style>
+        /* Updated Color Scheme */
+        :root {
+          --primary-color: #3498db;
+          --secondary-color: #f1c40f;
+          --accent-color: #e74c3c;
+          --background-color: #f0f2f5;
+        }
+
+        /* Rounded Corners and Soft Shadows */
+        button, .card, .section {
+          border-radius: 10px;
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Improved Typography */
+        body {
+          font-family: 'Open Sans', sans-serif;
+          font-size: 18px;
+          line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+          font-weight: bold;
+          margin-bottom: 10px;
+        }
+
+        h1 {
+          font-size: 36px;
+        }
+
+        h2 {
+          font-size: 24px;
+        }
+
+        h3 {
+          font-size: 18px;
+        }
+
+        /* Rearranged Elements for Better Balance */
+        .section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 60px 20px;
+        }
+
+        .portfolio-item {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+        }
+
+        .skills-list {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        /* Updated Navigation */
+        nav {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 20px 0;
+        }
+
+        nav ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        nav li {
+          margin: 0 20px;
+        }
+
+        nav a {
+          text-decoration: none;
+          color: var(--primary-color);
+          transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+          color: var(--accent-color);
+        }
+
+        /* Interactivity and Animations */
+        button:hover {
+          background-color: var(--accent-color);
+          color: white;
+          box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Hero Section */
+        .hero {
+          height: 100vh;
+          background-image: url('hero-image.jpg');
+          background-size: cover;
+          background-position: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+        }
+
+        .hero h1 {
+          font-size: 48px;
+          margin-bottom: 20px;
+        }
+
+        /* Modern Grid System */
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-gap: 20px;
+        }
+
+        .grid-item {
+          grid-column: span 4;
+        }
+
+        /* Micro-Interactions */
+        .button:hover {
+          background-color: var(--accent-color);
+          color: white;
+          box-shadow: 0px 8px 18px rgba(0, 0, 0, 0.15);
+          transform: translateY(-5px);
+        }
+
+        .loading-animation {
+          animation: loading 2s linear infinite;
+        }
+
+        @keyframes loading {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            transform: rotate(360deg);
+          }
+        }
+
+        /* Improved Accessibility */
+        .accessible-button {
+          background-color: var(--primary-color);
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          font-size: 18px;
+          cursor: pointer;
+        }
+
+        .accessible-button:hover {
+          background-color: var(--accent-color);
+        }
+
+        .accessible-button:focus {
+          box-shadow: 0px 0px 0px 2px var(--primary-color);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+          .grid {
+            grid-template-columns: repeat(6, 1fr);
+          }
+          .grid-item {
+            grid-column: span 6;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .grid {
+            grid-template-columns: repeat(4, 1fr);
+          }
+          .grid-item {
+            grid-column: span 4;
+          }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>John Doe</h1>
+        <p>Web Developer | Graphic Designer | Creative Enthusiast</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hi! I'm John, a web developer and graphic designer with a passion for creating visually appealing and user-friendly websites. I specialize in responsive design, front-end development, and building engaging digital experiences. Let me help you bring your ideas to life!</p>
+        <button class="btn accessible-button">Download Resume</button>
+    </section>
+
+    <section id="portfolio" class="section">
+        <h2>Portfolio</h2>
+        <div class="portfolio-item grid">
+            <div class="grid-item card">
+                <h3>Project 1</h3>
+                <p>A dynamic, responsive e-commerce website with a sleek, modern interface and intuitive navigation.</p>
+            </div>
+            <div class="grid-item card">
+                <h3>Project 2</h3>
+                <p>A web app built with React and Node.js, focusing on seamless user interaction and high performance.</p>
+            </div>
+            <div class="grid-item card">
+                <h3>Project 3</h3>
+                <p>A creative landing page designed to maximize conversions, featuring bold typography and custom graphics.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="skills-list grid">
+            <div class="grid-item card">
+                <h3>Web Development</h3>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                </ul>
+            </div>
+            <div class="grid-item card">
+                <h3>Graphic Design</h3>
+                <p>
+                    Adobe Creative Suite
+                    <ul>
+                        <li>Photoshop</li>
+                        <li>Illustrator</li>
+                        <li>InDesign</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="grid-item card">
+                <h3>UI/UX Design</h3>
+                <p>
+                    User-centered design principles
+                    <ul>
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                        <li>User testing</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Get in Touch</h2>
+        <p>Want to collaborate on a project or just say hi? Send me a message!</p>
+        <form>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea placeholder="Message"></textarea>
+            <button class="btn accessible-button">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 John Doe. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
